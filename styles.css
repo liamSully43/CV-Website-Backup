@@ -69,6 +69,7 @@ body {
 .titles {
   margin-bottom: 100px;
   font-size: 35px;
+  font-weight: 900;
 }
 
 header {
@@ -170,15 +171,37 @@ main #about .about-info-container span {
 }
 
 main #about .about-info-container a, main #about .about-info-container a:hover, main #about .about-info-container a:visited {
-  cursor: pointer;
+  color: none;
+  text-decoration: none;
 }
 
 main #about .about-info-container a img, main #about .about-info-container a:hover img, main #about .about-info-container a:visited img {
   background-color: #fff;
+  cursor: pointer;
 }
 
 main #about .about-info-container a img:hover, main #about .about-info-container a:hover img:hover, main #about .about-info-container a:visited img:hover {
+  -webkit-animation: backgroundcolourChange 0.3s;
+          animation: backgroundcolourChange 0.3s;
   background-color: #ff284c;
+}
+
+@-webkit-keyframes backgroundcolourChange {
+  from {
+    background-color: #fff;
+  }
+  to {
+    background-color: #ff284c;
+  }
+}
+
+@keyframes backgroundcolourChange {
+  from {
+    background-color: #fff;
+  }
+  to {
+    background-color: #ff284c;
+  }
 }
 
 main #about .triangle {
@@ -294,12 +317,12 @@ main #skills img {
 }
 
 main #skills img:hover {
-  -webkit-animation: colorChange 0.3s;
-          animation: colorChange 0.3s;
+  -webkit-animation: colourChange 0.3s;
+          animation: colourChange 0.3s;
   background-color: #fff;
 }
 
-@-webkit-keyframes colorChange {
+@-webkit-keyframes colourChange {
   from {
     background-color: #ff284c;
   }
@@ -308,12 +331,143 @@ main #skills img:hover {
   }
 }
 
-@keyframes colorChange {
+@keyframes colourChange {
   from {
     background-color: #ff284c;
   }
   to {
     background-color: #fff;
   }
+}
+
+main .portfolio {
+  background-color: #212121;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main .portfolio div h1 {
+  width: 100%;
+  text-align: center;
+}
+
+main .portfolio div #portfolio-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .portfolio div #portfolio-container .portfolio-containers {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  padding: 0px 50px;
+  height: auto;
+}
+
+main .portfolio div #portfolio-container .portfolio-containers a {
+  width: 100%;
+  height: auto;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  text-decoration: none !important;
+  cursor: pointer;
+  position: relative;
+}
+
+main .portfolio div #portfolio-container .portfolio-containers a img {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+}
+
+main .portfolio div #portfolio-container .portfolio-containers a .cover {
+  width: 100%;
+  height: 0%;
+  background-color: rgba(33, 33, 33, 0.4);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  overflow: hidden;
+}
+
+main .portfolio div #portfolio-container .portfolio-containers a .cover p {
+  color: #fff;
+  z-index: 1;
+  text-align: center;
+  margin: 0px;
+}
+
+main .portfolio div #portfolio-container .portfolio-containers a:hover img {
+  -webkit-animation: zoom 1s;
+          animation: zoom 1s;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+main .portfolio div #portfolio-container .portfolio-containers a:hover .cover {
+  -webkit-animation: expand 1s;
+          animation: expand 1s;
+  height: 100%;
+}
+
+@-webkit-keyframes expand {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes expand {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  to {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  to {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+  }
+}
+
+main .portfolio div #portfolio-container .portfolio-containers p {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 200;
 }
 /*# sourceMappingURL=styles.css.map */
