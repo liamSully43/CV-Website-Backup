@@ -1,3 +1,94 @@
+let sections = [
+  document.querySelector("#about"),
+  document.querySelector("#skills"),
+  document.querySelector("#portfolio"),
+  document.querySelector("#contact")
+]
+
+const about = document.querySelector("#about");
+const skills = document.querySelector("#skills");
+const portfolio = document.querySelector("#portfolio");
+const contact = document.querySelector("#contact");
+
+const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+window.addEventListener("scroll", function() {
+  if(about.getBoundingClientRect().top < height) {
+    Array.prototype.forEach.call(about.children, ele => {
+      ele.classList.add("slide-up");
+    })
+  }
+
+  if(skills.getBoundingClientRect().top < height) {
+    Array.prototype.forEach.call(skills.children, ele => {
+      ele.classList.add("slide-up");
+    })
+  }
+
+  if(portfolio.getBoundingClientRect().top < height) {
+    Array.prototype.forEach.call(portfolio.children, ele => {
+      ele.classList.add("slide-up");
+    })
+  }
+
+  if(contact.getBoundingClientRect().top < height) {
+    Array.prototype.forEach.call(contact.children, ele => {
+      ele.classList.add("slide-up");
+    })
+  }
+});
+
+const name = document.querySelectorAll(".fields")[0];
+const email = document.querySelectorAll(".fields")[1];
+const subject = document.querySelectorAll(".fields")[2];
+const fields = [name, email, subject];
+let showButton = null;
+
+for(let i=0; 3 > i; i++){
+  document.querySelectorAll(".fields")[i].addEventListener("keydown", function(e) {
+    setTimeout(function() {
+      if(name.value.length > 0 && email.value.length > 0 && subject.value.length > 0) {
+        document.querySelector("button").style.animation = "expand 1s";
+        document.querySelector("button").style.height = "100%";
+        document.querySelector("button").style.borderWidth = "1px";
+        document.querySelector(".button-cover").style.animation = "shrink 1s";
+        document.querySelector(".button-cover").style.height = "0%";
+        showButton = false;
+      }
+      else if((name.value.length <= 0 || email.value.length <= 0 || subject.value.length <= 0) && showButton == false) {
+        document.querySelector("button").style.animation = "shrink 1s";
+        document.querySelector("button").style.height = "0%";
+        document.querySelector(".button-cover").style.animation = "expand 1s";
+        document.querySelector(".button-cover").style.height = "100%";
+        setTimeout(function() {
+          document.querySelector("button").style.borderWidth = "0px";
+          showButton = true;
+        }, 800);
+      }
+    }, 1);
+  })
+}
+
+document.querySelector("form").addEventListener("submit", function(e) {
+  for(let i=0; fields.length > i;  i++) {
+    if(fields[i].value.length < 1) {
+      fields[i].style.borderColor = "#ff284c";
+      e.preventDefault();
+    }
+    else {
+      fields[i].style.borderColor = "#fff";
+    }
+  }
+})
+
+subject.addEventListener("keydown", function() {
+  if(subject.value.length >= 10) {
+    setTimeout(function() {
+      subject.style.borderColor = "#fff";
+    }, 1);
+  }
+});
+
 const particlesConfig = {
   "particles": {
     "number": {

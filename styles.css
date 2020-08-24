@@ -24,6 +24,10 @@
   background: #ff284c;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #212121;
   color: #f2f2f2 !important;
@@ -39,13 +43,21 @@ body {
   z-index: -1 !important;
 }
 
+#background-cover {
+  width: 100%;
+  height: 100%;
+  background-color: #212121;
+  position: absolute;
+  z-index: -2 !important;
+}
+
 #background {
   width: 100vw;
   height: 100vh;
   position: fixed;
   -webkit-animation: fade 3s;
           animation: fade 3s;
-  z-index: -2 !important;
+  z-index: -3 !important;
 }
 
 @-webkit-keyframes fade {
@@ -163,11 +175,13 @@ main #about .about-info-container {
 
 main #about .about-info-container p {
   font-size: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
 }
 
 main #about .about-info-container span {
   font-size: 25px;
-  color: #fc274b;
+  color: #ff284c;
 }
 
 main #about .about-info-container a, main #about .about-info-container a:hover, main #about .about-info-container a:visited {
@@ -309,14 +323,14 @@ main #skills p:nth-of-type(15) {
   top: 90px;
 }
 
-main #skills img {
+main #skills div img {
   background-color: #ff284c;
   position: relative;
   top: -260px;
   z-index: 1;
 }
 
-main #skills img:hover {
+main #skills div img:hover {
   -webkit-animation: colourChange 0.3s;
           animation: colourChange 0.3s;
   background-color: #fff;
@@ -340,32 +354,32 @@ main #skills img:hover {
   }
 }
 
-main .portfolio {
+main #portfolio {
   background-color: #212121;
   display: -ms-grid;
   display: grid;
   place-items: center;
 }
 
-main .portfolio div h1 {
+main #portfolio div h1 {
   width: 100%;
   text-align: center;
 }
 
-main .portfolio div #portfolio-container {
+main #portfolio div #portfolio-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-main .portfolio div #portfolio-container .portfolio-containers {
+main #portfolio div #portfolio-container .portfolio-containers {
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
   padding: 0px 50px;
   height: auto;
 }
 
-main .portfolio div #portfolio-container .portfolio-containers a {
+main #portfolio div #portfolio-container .portfolio-containers a {
   width: 100%;
   height: auto;
   display: -ms-grid;
@@ -377,13 +391,13 @@ main .portfolio div #portfolio-container .portfolio-containers a {
   position: relative;
 }
 
-main .portfolio div #portfolio-container .portfolio-containers a img {
+main #portfolio div #portfolio-container .portfolio-containers a img {
   width: 100%;
   height: auto;
   opacity: 1;
 }
 
-main .portfolio div #portfolio-container .portfolio-containers a .cover {
+main #portfolio div #portfolio-container .portfolio-containers a .cover {
   width: 100%;
   height: 0%;
   background-color: rgba(33, 33, 33, 0.4);
@@ -394,14 +408,14 @@ main .portfolio div #portfolio-container .portfolio-containers a .cover {
   overflow: hidden;
 }
 
-main .portfolio div #portfolio-container .portfolio-containers a .cover p {
+main #portfolio div #portfolio-container .portfolio-containers a .cover p {
   color: #fff;
   z-index: 1;
   text-align: center;
   margin: 0px;
 }
 
-main .portfolio div #portfolio-container .portfolio-containers a:hover img {
+main #portfolio div #portfolio-container .portfolio-containers a:hover img {
   -webkit-animation: zoom 1s;
           animation: zoom 1s;
   -webkit-transform: scale(1.15);
@@ -410,7 +424,7 @@ main .portfolio div #portfolio-container .portfolio-containers a:hover img {
           filter: blur(2px);
 }
 
-main .portfolio div #portfolio-container .portfolio-containers a:hover .cover {
+main #portfolio div #portfolio-container .portfolio-containers a:hover .cover {
   -webkit-animation: expand 1s;
           animation: expand 1s;
   height: 100%;
@@ -464,10 +478,189 @@ main .portfolio div #portfolio-container .portfolio-containers a:hover .cover {
   }
 }
 
-main .portfolio div #portfolio-container .portfolio-containers p {
+main #portfolio div #portfolio-container .portfolio-containers div {
   text-align: center;
-  margin-top: 30px;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers div .title-links, main #portfolio div #portfolio-container .portfolio-containers div .title-links:visited, main #portfolio div #portfolio-container .portfolio-containers div .code-links, main #portfolio div #portfolio-container .portfolio-containers div .code-links:visited {
+  display: inline-block;
+  vertical-align: bottom;
+  width: auto;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers div .title-links, main #portfolio div #portfolio-container .portfolio-containers div .title-links:visited {
+  text-align: center;
   font-size: 20px;
   font-weight: 200;
+  color: #fff;
+  text-decoration: none;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers div .title-links:hover {
+  color: #ff284c;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers div i {
+  color: darkgray;
+  margin-left: 20px;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers div .code-links, main #portfolio div #portfolio-container .portfolio-containers div .code-links:visited {
+  margin-left: 20px;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers div .code-links i, main #portfolio div #portfolio-container .portfolio-containers div .code-links:visited i {
+  color: #fff;
+  margin-left: 0px;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers div .code-links:hover i {
+  color: #ff284c;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers .skills-used {
+  text-align: center;
+  margin-top: 30px;
+}
+
+main #contact {
+  background-color: #212121;
+  padding-bottom: 0px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main #contact div {
+  width: 25%;
+}
+
+main #contact div h1 {
+  text-align: center;
+}
+
+main #contact form {
+  width: 100%;
+}
+
+main #contact form input, main #contact form textarea, main #contact form button {
+  display: block;
+  border: solid 1px #fff;
+  background-color: #212121;
+  color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+  width: calc(100% - 22px);
+  resize: vertical;
+}
+
+main #contact form .button-container {
+  width: 25%;
+  position: relative;
+  height: 45px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+main #contact form .button-container button {
+  width: 100%;
+  height: 0%;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #fff;
+  border-width: 0px;
+  z-index: 1;
+  margin-top: 0px;
+  padding: 0px;
+  position: relative;
+  cursor: pointer;
+}
+
+main #contact form .button-container .button-cover {
+  width: 100%;
+  height: 100%;
+  border: solid 1px #212121;
+  z-index: 1;
+  background-color: #212121;
+  position: relative;
+}
+
+main #contact form .button-container .text {
+  padding: 0px !important;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border: solid 1px rgba(0, 0, 0, 0);
+  z-index: 0;
+  position: relative;
+  top: calc(-100% - 1px);
+  cursor: pointer;
+}
+
+main #contact form .button-container .text p {
+  height: 25px;
+}
+
+@keyframes expand {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes shrink {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
+@keyframes shrink {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0%;
+  }
+}
+
+main #contact form .button-container:hover .text {
+  background-color: #ff284c;
+}
+
+main #contact .message {
+  font-size: 20px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 100;
+}
+
+/* --- Animation Class --- */
+.slide-up {
+  -webkit-animation: slideup 1.2s ease-out;
+          animation: slideup 1.2s ease-out;
+}
+
+@-webkit-keyframes slideup {
+  from {
+    margin-top: 500px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+
+@keyframes slideup {
+  from {
+    margin-top: 500px;
+  }
+  to {
+    margin-top: 0px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
