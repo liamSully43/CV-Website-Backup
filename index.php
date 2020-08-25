@@ -138,8 +138,8 @@
 <?php
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = filter_var($name = $_POST["name"], FILTER_SANITIZE_STRING);
-        $email = filter_var($name = $_POST["name"], FILTER_SANITIZE_EMAIL);
-        $subject = filter_var($subject = $_POST["project"], FILTER_SANITIZE_STRING);
+        $email = filter_var($email = $_POST["email"], FILTER_SANITIZE_EMAIL);
+        $subject = filter_var($subject = $_POST["subject"], FILTER_SANITIZE_STRING);
         $to = "liamsullivan43@gmail.com";
         $subjectHeader = "CV Website - " . $name;
         $subject = "
