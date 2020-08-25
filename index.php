@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet"> <!-- Google Fonts -->
     <script src="https://kit.fontawesome.com/70314bd783.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
     <link href="./styles.css" rel="stylesheet" type="text/css" />
+    <link href="./Assets/icon.png" type="image/png" rel="shortcut icon" />
     <title>Liam Sullivan</title>
 </head>
 <body>
