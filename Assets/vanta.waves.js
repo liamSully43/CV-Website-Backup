@@ -329,6 +329,8 @@
     })
 }));
 
+// Footer wave animation config
+
 VANTA.WAVES({
     el: "footer",
     mouseControls: false,

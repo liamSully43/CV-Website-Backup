@@ -10,8 +10,10 @@ const skills = document.querySelector("#skills");
 const portfolio = document.querySelector("#portfolio");
 const contact = document.querySelector("#contact");
 
+// cross browser support
 const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
+// Triggers sliding up animations for each section
 window.addEventListener("scroll", function() {
   if(about.getBoundingClientRect().top < height) {
     Array.prototype.forEach.call(about.children, ele => {
@@ -44,6 +46,8 @@ const subject = document.querySelectorAll(".fields")[2];
 const fields = [name, email, subject];
 let showButton = null;
 
+// triggers animation for the button
+
 for(let i=0; 3 > i; i++){
   document.querySelectorAll(".fields")[i].addEventListener("keydown", function(e) {
     setTimeout(function() {
@@ -69,6 +73,8 @@ for(let i=0; 3 > i; i++){
   })
 }
 
+// Checks if anything has been inputted in the fields before submitting
+
 document.querySelector("form").addEventListener("submit", function(e) {
   for(let i=0; fields.length > i;  i++) {
     if(fields[i].value.length < 1) {
@@ -81,6 +87,8 @@ document.querySelector("form").addEventListener("submit", function(e) {
   }
 })
 
+// Checks if the subject field has at least 10 charcters
+
 subject.addEventListener("keydown", function() {
   if(subject.value.length >= 10) {
     setTimeout(function() {
@@ -88,6 +96,8 @@ subject.addEventListener("keydown", function() {
     }, 1);
   }
 });
+
+// Config for the animated backgrounds 
 
 const particlesConfig = {
   "particles": {

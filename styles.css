@@ -143,7 +143,7 @@ nav ul li a:hover {
 }
 
 main section {
-  padding: 50px 0px;
+  padding: 70px 0px;
   overflow: hidden;
 }
 
@@ -321,9 +321,10 @@ main #portfolio div #portfolio-container .portfolio-containers a img {
 }
 
 main #portfolio div #portfolio-container .portfolio-containers a .cover {
-  width: 100%;
+  width: calc(100% - 10px);
   height: 0%;
   background-color: rgba(33, 33, 33, 0.4);
+  padding: 0px 5px;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -589,13 +590,6 @@ main #contact .message {
   }
 }
 
-/*
-
-Lighthouse check
-Upload to GitHub
-Upload to server
-
-*/
 /* -- Table View -- */
 @media (max-width: 1024px) {
   header h1 {

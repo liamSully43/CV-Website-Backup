@@ -10,15 +10,16 @@
     <title>Liam Sullivan</title>
 </head>
 <body>
-    <div id="particles-js"></div>
-    <div id="background-cover"></div>
-    <div id="background"></div>
+    <div id="particles-js"></div> <!-- Heading animation background -->
+    <div id="background-cover"></div> <!-- Used to high the fixed background animation when fading in the heading animation -->
+    <div id="background"></div> <!-- Fixed background animation -->
     <header>
         <div>
             <h1>Liam Sullivan</h1>
             <h2>Front End Developer</h2>
         </div>
     </header>
+    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -28,6 +29,7 @@
         </ul>
     </nav>
     <main>
+        <!-- About Section -->
         <section id="about">
             <div class="triangle left-triangle"></div>
             <div class="about-info-container">
@@ -45,6 +47,7 @@
             <div class="triangle right-triangle"></div>
         </section>
         <div class="break"></div>
+        <!-- Skills Section -->
         <section id="skills">
             <h1 class="titles">SKILLS</h1>
             <div> <!-- div required for animations - add floating animation to div & colour animation to img so that when the user hovers over the img the floating animation isn't reapplied -->
@@ -52,11 +55,13 @@
             </div>
         </section>
         <div class="break"></div>
+        <!-- Portfolio Section -->
         <section id="portfolio">
             <div>
                 <h1 class="titles">PORTFOLIO</h1>
                 <div id="portfolio-container">
                     <section class="portfolio-containers">
+                        <!-- Photo & Container of Project -->
                         <a href="http:discoverdrink.org" target="_blank" title="View the Discover Drink project">
                             <img src="./Assets/Discover Drink.PNG" />
                             <div class="cover">
@@ -65,6 +70,7 @@
                         </a>
                         <br />
                         <br />
+                        <!-- Text & Links Related to Project -->
                         <div>
                             <a href="http:discoverdrink.org" target="_blank" title="View the Discover Drink project" class="title-links">Discover Drink</a>
                             <i class="far fa-eye-slash" title="Code not available"></i>
@@ -72,6 +78,7 @@
                         <p class="skills-used">JavaScript, Node.js & Express.js</p>
                     </section>
                     <section class="portfolio-containers">
+                        <!-- Photo & Container of Project -->
                         <a href="https://red-window.co.uk/" target="_blank" title="View the Red Window project">
                             <img src="./Assets/Red Window.png" />
                             <div class="cover">
@@ -80,6 +87,7 @@
                         </a>
                         <br />
                         <br />
+                        <!-- Text & Links Related to Project -->
                         <div>
                             <a href="https://red-window.co.uk/" target="_blank" title="View the Red Window project" class="title-links">Red Window</a>
                             <a href="https://github.com/liamSully43/red-window" target="_blank" title="View the code" class="code-links"><i class="fas fa-code"></i></a>
@@ -87,6 +95,7 @@
                         <p class="skills-used">Angular JS & unsplash.com API</p>
                     </section>
                     <section class="portfolio-containers">
+                        <!-- Photo & Container of Project -->
                         <a href="https://liam-sullivan.co.uk/logo-creator" target="_blank" title="View the Graphic Logo Creator project">
                             <img src="./Assets/Logo Creator.png" />
                             <div class="cover">
@@ -95,6 +104,7 @@
                         </a>
                         <br />
                         <br />
+                        <!-- Text & Links Related to Project -->
                         <div>
                             <a href="https://liam-sullivan.co.uk/logo-creator" target="_blank" title="View the Graphic Logo Creator project" class="title-links">Graphic Logo Creator</a>
                             <a href="https://github.com/liamSully43/graphic-logo-creator" target="_blank" title="View the code" class="code-links"><i class="fas fa-code"></i></a>
@@ -102,6 +112,7 @@
                         <p class="skills-used">HTML, CSS & JavaScript</p>
                     </section>
                     <section class="portfolio-containers">
+                        <!-- Photo & Container of Project -->
                         <a href="https://liamsully43.github.io/wheel-of-fortune/" target="_blank" title="View the Wheel of Fortune project">
                             <img src="./Assets/Wheel of Fortune.png" />
                             <div class="cover">
@@ -110,6 +121,7 @@
                         </a>
                         <br />
                         <br />
+                        <!-- Text & Links Related to Project -->
                         <div>
                             <a href="https://liamsully43.github.io/wheel-of-fortune/" target="_blank" title="View the Wheel of Fortune project" class="title-links">Wheel of Fortune</a>
                             <a href="https://github.com/liamSully43/wheel-of-fortune" target="_blank" title="View the code" class="code-links"><i class="fas fa-code"></i></a>
@@ -120,6 +132,7 @@
             </div>
         </section>
         <div class="break"></div>
+        <!-- Contact Section -->
         <section id="contact">
             <div>
                 <h1 class="titles">CONTACT</h1>
@@ -127,14 +140,19 @@
                     <input class="fields" name="name" type="text" placeholder="Name" />
                     <input class="fields" name="email" type="email" placeholder="Email" />
                     <textarea class="fields" name="subject" placeholder="Subject"></textarea>
+                    <!-- Container to handle button animation -->
                     <div class="button-container">
-                        <button type="submit"></button>
-                        <div class="button-cover"></div>
-                        <div class="text">
-                            <p>Submit</p>
+                        <button type="submit"></button> <!-- The button itself -->
+                        <div class="button-cover"></div> <!-- What hides the text -->
+                        <div class="text"> <!-- The text -->
+                            <p>Submit</p> 
                         </div>
                     </div>
+                    <!-- 
+                        The animation works by changing the height of the button & cover at the same time (although one grows and the other shrinks) to either reveal or hide the text beneath 
+                    -->
                 </form>
+                <!-- PHP Code to handle form -->
 <!--
 <?php
     if($_SERVER["REQUEST_METHOD"] == "POST") {
