@@ -1,0 +1,33 @@
+#portfolio {
+        
+    div {
+
+        #portfolio-container {
+
+            .portfolio-containers {
+                flex-basis: calc(100% - 30px) !important;
+        
+                a {
+
+                    .cover {
+
+                        p {
+                            font-size: 5vw !important;
+                        }
+                    }
+                }
+        
+                div {
+
+                    .title-links, .title-links:visited, .code-links, .code-links:visited, i {
+                        font-size: 5vw !important;
+                    }
+                }
+        
+                .skills-used {
+                    font-size: 5vw !important;
+                }
+            }
+        }
+    }
+}

@@ -21,7 +21,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff284c;
+  background: #00c5a0;
 }
 
 html {
@@ -139,7 +139,7 @@ nav ul li a, nav ul li a:visited {
 }
 
 nav ul li a:hover {
-  color: #ff284c;
+  color: #00c5a0;
 }
 
 main section {
@@ -176,13 +176,12 @@ main #about .about-info-container {
 
 main #about .about-info-container p {
   font-size: 1vw;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 main #about .about-info-container span {
   font-size: 1.5vw;
-  color: #ff284c;
+  color: #00c5a0;
 }
 
 main #about .about-info-container a, main #about .about-info-container a:hover, main #about .about-info-container a:visited {
@@ -200,7 +199,7 @@ main #about .about-info-container a img, main #about .about-info-container a:hov
 main #about .about-info-container a img:hover, main #about .about-info-container a:hover img:hover, main #about .about-info-container a:visited img:hover {
   -webkit-animation: backgroundcolourChange 0.3s;
           animation: backgroundcolourChange 0.3s;
-  background-color: #ff284c;
+  background-color: #00c5a0;
 }
 
 @-webkit-keyframes backgroundcolourChange {
@@ -208,7 +207,7 @@ main #about .about-info-container a img:hover, main #about .about-info-container
     background-color: #fff;
   }
   to {
-    background-color: #ff284c;
+    background-color: #00c5a0;
   }
 }
 
@@ -217,7 +216,7 @@ main #about .about-info-container a img:hover, main #about .about-info-container
     background-color: #fff;
   }
   to {
-    background-color: #ff284c;
+    background-color: #00c5a0;
   }
 }
 
@@ -248,7 +247,7 @@ main #skills {
 main #skills div img {
   width: 90vw;
   max-width: 500px;
-  background-color: #ff284c;
+  background-color: #00c5a0;
 }
 
 main #skills div img:hover {
@@ -259,7 +258,7 @@ main #skills div img:hover {
 
 @-webkit-keyframes colourChange {
   from {
-    background-color: #ff284c;
+    background-color: #00c5a0;
   }
   to {
     background-color: #fff;
@@ -268,7 +267,7 @@ main #skills div img:hover {
 
 @keyframes colourChange {
   from {
-    background-color: #ff284c;
+    background-color: #00c5a0;
   }
   to {
     background-color: #fff;
@@ -422,7 +421,7 @@ main #portfolio div #portfolio-container .portfolio-containers div .title-links,
 }
 
 main #portfolio div #portfolio-container .portfolio-containers div .title-links:hover {
-  color: #ff284c;
+  color: #00c5a0;
 }
 
 main #portfolio div #portfolio-container .portfolio-containers div i {
@@ -440,7 +439,7 @@ main #portfolio div #portfolio-container .portfolio-containers div .code-links i
 }
 
 main #portfolio div #portfolio-container .portfolio-containers div .code-links:hover i {
-  color: #ff284c;
+  color: #00c5a0;
 }
 
 main #portfolio div #portfolio-container .portfolio-containers .skills-used {
@@ -455,6 +454,11 @@ main #contact {
   display: -ms-grid;
   display: grid;
   place-items: center;
+}
+
+main #contact label {
+  position: absolute;
+  opacity: 0;
 }
 
 main #contact div {
@@ -498,6 +502,7 @@ main #contact form .button-container button {
   margin-top: 0px;
   padding: 0px;
   position: relative;
+  color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
 
@@ -557,13 +562,12 @@ main #contact form .button-container .text p {
 }
 
 main #contact form .button-container:hover .text {
-  background-color: #ff284c;
+  background-color: #00c5a0;
 }
 
 main #contact .message {
   font-size: 1vw;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 /* --- Animation Class --- */
@@ -587,144 +591,6 @@ main #contact .message {
   }
   to {
     margin-top: 0px;
-  }
-}
-
-/* -- Table View -- */
-@media (max-width: 1024px) {
-  header h1 {
-    font-size: 10vw;
-  }
-  header h2 {
-    font-size: 7vw;
-  }
-  .titles {
-    font-size: 4vw;
-  }
-  .break {
-    height: 200px !important;
-  }
-  nav ul li {
-    font-size: 2vw;
-  }
-  main #about .about-info-container p {
-    font-size: 2vw;
-  }
-  main #about .about-info-container span {
-    font-size: 3vw;
-  }
-  main #about .about-info-container a img {
-    width: 4vw;
-    height: 4vw;
-  }
-  main #about .triangle {
-    border-top-width: 30vw;
-    border-bottom-width: 30vw;
-    border-left-width: 10vw;
-    border-right-width: 10vw;
-  }
-  main #portfolio div #portfolio-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  main #portfolio div #portfolio-container .portfolio-containers {
-    -ms-flex-preferred-size: calc(25% - 30px);
-        flex-basis: calc(25% - 30px);
-    padding: 0px 15px;
-  }
-  main #portfolio div #portfolio-container .portfolio-containers .cover p {
-    font-size: 1.5vw;
-  }
-  main #portfolio div #portfolio-container .portfolio-containers .title-links, main #portfolio div #portfolio-container .portfolio-containers .title-links:visited {
-    font-size: 1.5vw !important;
-  }
-  main #portfolio div #portfolio-container .portfolio-containers .skills-used {
-    font-size: 1.5vw;
-  }
-  main #contact div {
-    width: 35%;
-  }
-}
-
-/* -- Mobile View -- */
-@media (max-width: 450px) {
-  .break {
-    height: 100px !important;
-  }
-  .titles {
-    font-size: 5vw;
-    margin-bottom: 10vw;
-  }
-  nav ul li {
-    font-size: 3vw;
-  }
-  main #about .about-info-container p {
-    font-size: 3vw;
-  }
-  main #about .about-info-container span {
-    font-size: 4vw;
-  }
-  main #about .about-info-container a img {
-    width: 7vw;
-    height: 7vw;
-  }
-  main #about .triangle {
-    border-top-width: 40vw;
-    border-bottom-width: 40vw;
-    border-left-width: 10vw;
-    border-right-width: 10vw;
-  }
-  main #portfolio {
-    padding-bottom: 0px;
-  }
-  main #portfolio div #portfolio-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  main #portfolio div #portfolio-container .portfolio-containers {
-    -ms-flex-preferred-size: calc(50% - 30px);
-        flex-basis: calc(50% - 30px);
-    padding: 0px 15px;
-  }
-  main #portfolio div #portfolio-container .portfolio-containers .cover p {
-    font-size: 2.5vw;
-  }
-  main #portfolio div #portfolio-container .portfolio-containers br:nth-of-type(1) {
-    display: none !important;
-  }
-  main #portfolio div #portfolio-container .portfolio-containers .title-links, main #portfolio div #portfolio-container .portfolio-containers .title-links:visited, main #portfolio div #portfolio-container .portfolio-containers i {
-    font-size: 2.5vw !important;
-    margin-top: 10px;
-  }
-  main #portfolio div #portfolio-container .portfolio-containers .skills-used {
-    font-size: 2.5vw;
-    margin-top: 10px;
-    margin-bottom: 50px;
-  }
-  main #contact div {
-    width: 80%;
-  }
-  main #contact div .fields {
-    font-size: 2vw !important;
-  }
-}
-
-/* -- Small Mobile View -- */
-@media (max-width: 400px) {
-  #portfolio div #portfolio-container .portfolio-containers {
-    -ms-flex-preferred-size: calc(100% - 30px) !important;
-        flex-basis: calc(100% - 30px) !important;
-  }
-  #portfolio div #portfolio-container .portfolio-containers a .cover p {
-    font-size: 5vw !important;
-  }
-  #portfolio div #portfolio-container .portfolio-containers div .title-links, #portfolio div #portfolio-container .portfolio-containers div .title-links:visited, #portfolio div #portfolio-container .portfolio-containers div .code-links, #portfolio div #portfolio-container .portfolio-containers div .code-links:visited, #portfolio div #portfolio-container .portfolio-containers div i {
-    font-size: 5vw !important;
-  }
-  #portfolio div #portfolio-container .portfolio-containers .skills-used {
-    font-size: 5vw !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,17 @@
+#portfolio div #portfolio-container .portfolio-containers {
+  -ms-flex-preferred-size: calc(100% - 30px) !important;
+      flex-basis: calc(100% - 30px) !important;
+}
+
+#portfolio div #portfolio-container .portfolio-containers a .cover p {
+  font-size: 5vw !important;
+}
+
+#portfolio div #portfolio-container .portfolio-containers div .title-links, #portfolio div #portfolio-container .portfolio-containers div .title-links:visited, #portfolio div #portfolio-container .portfolio-containers div .code-links, #portfolio div #portfolio-container .portfolio-containers div .code-links:visited, #portfolio div #portfolio-container .portfolio-containers div i {
+  font-size: 5vw !important;
+}
+
+#portfolio div #portfolio-container .portfolio-containers .skills-used {
+  font-size: 5vw !important;
+}
+/*# sourceMappingURL=small-mobile.css.map */

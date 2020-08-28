@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet"> <!-- Google Fonts -->
-    <script src="https://kit.fontawesome.com/70314bd783.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
+    <meta name="Description" content="Front end web developer in the southwest area, available for freelance work" >
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet" id="fonts" disabled> <!-- Google Fonts -->
+    <script defer src="https://kit.fontawesome.com/70314bd783.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
     <link href="./styles.css" rel="stylesheet" type="text/css" />
+    <link href="./tablet.css" rel="stylesheet" type="text/css" media="(max-width: 1024px)" />
+    <link href="./mobile.css" rel="stylesheet" type="text/css" media="(max-width: 450px)" />
+    <link href="./small-mobile.css" rel="stylesheet" type="text/css" media="(max-width: 400px)" />
     <link href="./Assets/icon.png" type="image/png" rel="shortcut icon" />
     <title>Liam Sullivan</title>
 </head>
@@ -41,7 +45,7 @@
                     <span>liamsullivan43@gmail.com</span>
                     <br />
                     <br />
-                    <a href="https://github.com/liamSully43" target="_blank" title="Click to visit my Github"><img src="./Assets/github.png" width="60" height="60" alt="Link to Github account" /></a>
+                    <a href="https://github.com/liamSully43" target="_blank" rel="noreferrer" title="Click to visit my Github"><img src="./Assets/github.png" width="60" height="60" alt="Link to Github account" /></a>
                 </div>
             </div>
             <div class="triangle right-triangle"></div>
@@ -51,7 +55,7 @@
         <section id="skills">
             <h1 class="titles">SKILLS</h1>
             <div> <!-- div required for animations - add floating animation to div & colour animation to img so that when the user hovers over the img the floating animation isn't reapplied -->
-                <img src="./Assets/skills.png" height="auto" />
+                <img src="./Assets/skills.webp" height="auto" alt="HTML, CSS, SCSS, Bootstrap, JavaScript, jQuery, React, Angular, Node, Express, PHP, MongoDB, FileZilla, Git Version Control, Adobe XD" />
             </div>
         </section>
         <div class="break"></div>
@@ -61,9 +65,10 @@
                 <h1 class="titles">PORTFOLIO</h1>
                 <div id="portfolio-container">
                     <section class="portfolio-containers">
+                        <!-- Discover Drink -->
                         <!-- Photo & Container of Project -->
-                        <a href="http:discoverdrink.org" target="_blank" title="View the Discover Drink project">
-                            <img src="./Assets/Discover Drink.PNG" />
+                        <a href="http:discoverdrink.org" target="_blank" rel="noreferrer" title="View the Discover Drink project">
+                            <img src="./Assets/Discover Drink.webp" alt="Link to the Discover Drink project" />
                             <div class="cover">
                                 <p>A database for drinks and venues</p>
                             </div>
@@ -72,15 +77,16 @@
                         <br />
                         <!-- Text & Links Related to Project -->
                         <div>
-                            <a href="http:discoverdrink.org" target="_blank" title="View the Discover Drink project" class="title-links">Discover Drink</a>
+                            <a href="http:discoverdrink.org" target="_blank" rel="noreferrer" title="View the Discover Drink project" class="title-links">Discover Drink</a>
                             <i class="far fa-eye-slash" title="Code not available"></i>
                         </div>
                         <p class="skills-used">JavaScript, Node.js & Express.js</p>
                     </section>
                     <section class="portfolio-containers">
+                        <!-- Red Window -->
                         <!-- Photo & Container of Project -->
-                        <a href="https://red-window.co.uk/" target="_blank" title="View the Red Window project">
-                            <img src="./Assets/Red Window.png" />
+                        <a href="https://red-window.co.uk/" target="_blank" rel="noreferrer" title="View the Red Window project">
+                            <img src="./Assets/Red Window.webp" alt="Link to the Red Window project" />
                             <div class="cover">
                                 <p>An image gallery that sources its images from unsplash.com</p>
                             </div>
@@ -89,15 +95,16 @@
                         <br />
                         <!-- Text & Links Related to Project -->
                         <div>
-                            <a href="https://red-window.co.uk/" target="_blank" title="View the Red Window project" class="title-links">Red Window</a>
-                            <a href="https://github.com/liamSully43/red-window" target="_blank" title="View the code" class="code-links"><i class="fas fa-code"></i></a>
+                            <a href="https://red-window.co.uk/" target="_blank" rel="noreferrer" title="View the Red Window project" class="title-links">Red Window</a>
+                            <a href="https://github.com/liamSully43/red-window" target="_blank" rel="noreferrer" title="View the code" class="code-links"><i class="fas fa-code"></i></a>
                         </div>
                         <p class="skills-used">Angular JS & unsplash.com API</p>
                     </section>
                     <section class="portfolio-containers">
+                        <!-- Graphic Logo Creator -->
                         <!-- Photo & Container of Project -->
-                        <a href="https://liam-sullivan.co.uk/logo-creator" target="_blank" title="View the Graphic Logo Creator project">
-                            <img src="./Assets/Logo Creator.png" />
+                        <a href="https://liam-sullivan.co.uk/logo-creator" target="_blank" rel="noreferrer" title="View the Graphic Logo Creator project">
+                            <img src="./Assets/Logo Creator.webp" alt="Link to the Graphic Logo Creator project" />
                             <div class="cover">
                                 <p>Create your own graphic images, icons or logos with this Graphic Logo Creator</p>
                             </div>
@@ -106,15 +113,16 @@
                         <br />
                         <!-- Text & Links Related to Project -->
                         <div>
-                            <a href="https://liam-sullivan.co.uk/logo-creator" target="_blank" title="View the Graphic Logo Creator project" class="title-links">Graphic Logo Creator</a>
-                            <a href="https://github.com/liamSully43/graphic-logo-creator" target="_blank" title="View the code" class="code-links"><i class="fas fa-code"></i></a>
+                            <a href="https://liam-sullivan.co.uk/logo-creator" target="_blank" rel="noreferrer" title="View the Graphic Logo Creator project" class="title-links">Graphic Logo Creator</a>
+                            <a href="https://github.com/liamSully43/graphic-logo-creator" target="_blank" rel="noreferrer" title="View the code" class="code-links"><i class="fas fa-code"></i></a>
                         </div>
                         <p class="skills-used">HTML, CSS & JavaScript</p>
                     </section>
                     <section class="portfolio-containers">
+                        <!-- Wheel of Fortune -->
                         <!-- Photo & Container of Project -->
-                        <a href="https://liamsully43.github.io/wheel-of-fortune/" target="_blank" title="View the Wheel of Fortune project">
-                            <img src="./Assets/Wheel of Fortune.png" />
+                        <a href="https://liamsully43.github.io/wheel-of-fortune/" target="_blank" rel="noreferrer" title="View the Wheel of Fortune project">
+                            <img src="./Assets/Wheel of Fortune.webp" alt="Link to the Wheel of Fortune project" />
                             <div class="cover">
                                 <p>An online game adaptation of the Wheel of Fortune game show</p>
                             </div>
@@ -123,8 +131,8 @@
                         <br />
                         <!-- Text & Links Related to Project -->
                         <div>
-                            <a href="https://liamsully43.github.io/wheel-of-fortune/" target="_blank" title="View the Wheel of Fortune project" class="title-links">Wheel of Fortune</a>
-                            <a href="https://github.com/liamSully43/wheel-of-fortune" target="_blank" title="View the code" class="code-links"><i class="fas fa-code"></i></a>
+                            <a href="https://liamsully43.github.io/wheel-of-fortune/" target="_blank" rel="noreferrer" title="View the Wheel of Fortune project" class="title-links">Wheel of Fortune</a>
+                            <a href="https://github.com/liamSully43/wheel-of-fortune" target="_blank" rel="noreferrer" title="View the code" class="code-links"><i class="fas fa-code"></i></a>
                         </div>
                         <p class="skills-used">React.js</p>
                     </section>
@@ -137,12 +145,15 @@
             <div>
                 <h1 class="titles">CONTACT</h1>
                 <form action="/#contact" method="POST">
-                    <input class="fields" name="name" type="text" placeholder="Name" />
-                    <input class="fields" name="email" type="email" placeholder="Email" />
-                    <textarea class="fields" name="subject" placeholder="Subject"></textarea>
+                    <label for="name" >Name</label>
+                    <label for="email" >Email</label>
+                    <label for="subject" >Subject</label>
+                    <input class="fields" id="name" name="name" type="text" placeholder="Name" />
+                    <input class="fields" id="email" name="email" type="email" placeholder="Email" />
+                    <textarea class="fields" id="subject" name="subject" placeholder="Subject"></textarea>
                     <!-- Container to handle button animation -->
                     <div class="button-container">
-                        <button type="submit"></button> <!-- The button itself -->
+                        <button type="submit">Submit</button> <!-- The button itself -->
                         <div class="button-cover"></div> <!-- What hides the text -->
                         <div class="text"> <!-- The text -->
                             <p>Submit</p> 
@@ -182,5 +193,5 @@
     <script src="assets/particles.min.js"></script>
     <script src="./script.js" type="text/JavaScript"></script>
     <script src="./Assets/three.min.js"></script>
-<script src="./Assets/vanta.waves.js"></script>
+    <script src="./Assets/vanta.waves.js"></script>
 </html>
