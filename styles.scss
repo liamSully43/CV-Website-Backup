@@ -19,7 +19,7 @@ $text-font-size-small: 2vw;
 
 $primary: #212121;
 $secondary: #fff;
-$tertiary: #ff284c;
+$tertiary: #00c5a0;
 
 // Scrollbar styling
 
@@ -178,8 +178,7 @@ main {
             
             p {
                 font-size: $text-font-size;
-                font-family: 'Noto Sans JP', sans-serif;
-                font-weight: 100;
+                font-weight: 300;
             }
 
             span {
@@ -411,6 +410,11 @@ main {
         display: grid;
         place-items: center;
 
+        label {
+            position: absolute;
+            opacity: 0;
+        }
+
         div {
             width: 25%;
 
@@ -450,6 +454,7 @@ main {
                     margin-top: 0px;
                     padding: 0px;
                     position: relative;
+                    color: rgba(0,0,0,0);
                     cursor: pointer;
                 }
 
@@ -511,8 +516,7 @@ main {
 
         .message {
             font-size: $text-font-size;
-            font-family: 'Noto Sans JP', sans-serif;
-            font-weight: 100;
+            font-weight: 300;
         }
     }
 }
@@ -529,248 +533,5 @@ main {
     }
     to {
         margin-top: 0px;
-    }
-}
-
-/* -- Table View -- */
-
-@media (max-width: 1024px) {
-    
-    header {
-
-        h1 {
-            font-size: 10vw;
-        }
-    
-        h2 {
-            font-size: 7vw;
-        }
-    }
-
-    .titles {
-        font-size: $heading-font-size-small;
-    }
-
-    .break {
-        height: 200px !important;
-    }
-
-    nav {
-        ul {
-            li {
-                font-size: $text-font-size-small;
-            }
-        }
-    }
-
-    main {
-        #about {
-
-            .about-info-container {
-
-                p {
-                    font-size: $text-font-size-small;
-                }
-                
-                span {
-                    font-size: 3vw;
-                }
-
-                a {
-
-                    img {
-                        width: 4vw;
-                        height: 4vw;
-                    }
-                }
-            }
-
-            .triangle {
-                border-top-width: 30vw;
-                border-bottom-width: 30vw;
-                border-left-width: 10vw;
-                border-right-width: 10vw;
-            }
-        }
-
-        #portfolio {
-            
-            div {
-
-                #portfolio-container {
-                    display: flex;
-
-                    .portfolio-containers {
-                        flex-basis: calc(25% - 30px);
-                        padding: 0px 15px;
-
-                        .cover {
-
-                            p {
-                                font-size: 1.5vw;
-                            }
-                        }
-
-                        .title-links, .title-links:visited {
-                            font-size: 1.5vw !important;
-                        }
-
-                        .skills-used {
-                            font-size: 1.5vw;
-                        }
-                    }
-                }
-            }
-        }
-
-        #contact {
-
-            div {
-                width: 35%;
-            }
-        }
-    }
-
-}
-
-/* -- Mobile View -- */
-
-@media (max-width: 450px) {
-
-    .break {
-        height: 100px !important;
-    }
-
-    .titles {
-        font-size: 5vw;
-        margin-bottom: 10vw;
-    }
-
-    nav {
-        ul {
-            li {
-                font-size: 3vw;
-            }
-        }
-    }
-
-    main {
-        #about {
-
-            .about-info-container {
-
-                p {
-                    font-size: 3vw;
-                }
-                
-                span {
-                    font-size: 4vw;
-                }
-
-                a {
-
-                    img {
-                        width: 7vw;
-                        height: 7vw;
-                    }
-                }
-            }
-
-            .triangle {
-                border-top-width: 40vw;
-                border-bottom-width: 40vw;
-                border-left-width: 10vw;
-                border-right-width: 10vw;
-            }
-        }
-
-        #portfolio {
-            padding-bottom: 0px;
-            
-            div {
-
-                #portfolio-container {
-                    display: flex;
-
-                    .portfolio-containers {
-                        flex-basis: calc(50% - 30px);
-                        padding: 0px 15px;
-
-                        .cover {
-
-                            p {
-                                font-size: 2.5vw;
-                            }
-                        }
-
-                        br:nth-of-type(1) {
-                            display: none !important;
-                        }
-
-                        .title-links, .title-links:visited, i {
-                            font-size: 2.5vw !important;
-                            margin-top: 10px;
-                        }
-
-                        .skills-used {
-                            font-size: 2.5vw;
-                            margin-top: 10px;
-                            margin-bottom: 50px;
-                        }
-                    }
-                }
-            }
-        }
-
-        #contact {
-
-            div {
-                width: 80%;
-
-                .fields {
-                    font-size: 2vw !important;
-                }
-            }
-        }
-    }
-
-}
-
-/* -- Small Mobile View -- */
-
-@media (max-width: 400px) {
-
-    #portfolio {
-        
-        div {
-
-            #portfolio-container {
-
-                .portfolio-containers {
-                    flex-basis: calc(100% - 30px) !important;
-            
-                    a {
-
-                        .cover {
-
-                            p {
-                                font-size: 5vw !important;
-                            }
-                        }
-                    }
-            
-                    div {
-
-                        .title-links, .title-links:visited, .code-links, .code-links:visited, i {
-                            font-size: 5vw !important;
-                        }
-                    }
-            
-                    .skills-used {
-                        font-size: 5vw !important;
-                    }
-                }
-            }
-        }
     }
 }

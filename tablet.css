@@ -1,0 +1,68 @@
+header h1 {
+  font-size: 10vw;
+}
+
+header h2 {
+  font-size: 7vw;
+}
+
+.titles {
+  font-size: 4vw;
+}
+
+.break {
+  height: 200px !important;
+}
+
+nav ul li {
+  font-size: 2vw;
+}
+
+main #about .about-info-container p {
+  font-size: 2vw;
+}
+
+main #about .about-info-container span {
+  font-size: 3vw;
+}
+
+main #about .about-info-container a img {
+  width: 4vw;
+  height: 4vw;
+}
+
+main #about .triangle {
+  border-top-width: 30vw;
+  border-bottom-width: 30vw;
+  border-left-width: 10vw;
+  border-right-width: 10vw;
+}
+
+main #portfolio div #portfolio-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers {
+  -ms-flex-preferred-size: calc(25% - 30px);
+      flex-basis: calc(25% - 30px);
+  padding: 0px 15px;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers .cover p {
+  font-size: 1.5vw;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers .title-links, main #portfolio div #portfolio-container .portfolio-containers .title-links:visited {
+  font-size: 1.5vw !important;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers .skills-used {
+  font-size: 1.5vw;
+}
+
+main #contact div {
+  width: 35%;
+}
+/*# sourceMappingURL=tablet.css.map */

@@ -1,3 +1,5 @@
+
+document.querySelector("#fonts").removeAttribute("disabled");
 let sections = [
   document.querySelector("#about"),
   document.querySelector("#skills"),

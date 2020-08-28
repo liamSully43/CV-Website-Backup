@@ -1,0 +1,76 @@
+.break {
+  height: 100px !important;
+}
+
+.titles {
+  font-size: 5vw;
+  margin-bottom: 10vw;
+}
+
+nav ul li {
+  font-size: 3vw;
+}
+
+main #about .about-info-container p {
+  font-size: 3vw;
+}
+
+main #about .about-info-container span {
+  font-size: 4vw;
+}
+
+main #about .about-info-container a img {
+  width: 7vw;
+  height: 7vw;
+}
+
+main #about .triangle {
+  border-top-width: 40vw;
+  border-bottom-width: 40vw;
+  border-left-width: 10vw;
+  border-right-width: 10vw;
+}
+
+main #portfolio {
+  padding-bottom: 0px;
+}
+
+main #portfolio div #portfolio-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers {
+  -ms-flex-preferred-size: calc(50% - 30px);
+      flex-basis: calc(50% - 30px);
+  padding: 0px 15px;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers .cover p {
+  font-size: 2.5vw;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers br:nth-of-type(1) {
+  display: none !important;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers .title-links, main #portfolio div #portfolio-container .portfolio-containers .title-links:visited, main #portfolio div #portfolio-container .portfolio-containers i {
+  font-size: 2.5vw !important;
+  margin-top: 10px;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers .skills-used {
+  font-size: 2.5vw;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+main #contact div {
+  width: 80%;
+}
+
+main #contact div .fields {
+  font-size: 2vw !important;
+}
+/*# sourceMappingURL=mobile.css.map */
