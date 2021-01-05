@@ -26,6 +26,11 @@ window.addEventListener("scroll", function() {
   if(skills.getBoundingClientRect().top < height) {
     Array.prototype.forEach.call(skills.children, ele => {
       ele.classList.add("slide-up");
+      setTimeout(() => {
+        document.querySelector(".front-end").classList.add("expand-front-end");
+        document.querySelector(".back-end").classList.add("expand-back-end");
+        document.querySelector(".miscellaneous").classList.add("expand-miscellaneous");
+      }, 1500);
     })
   }
 
@@ -42,18 +47,35 @@ window.addEventListener("scroll", function() {
   }
 });
 
-const name = document.querySelectorAll(".fields")[0];
+// toggles video expand & shrink classes to expand & shrink the container
+
+const videoDemoButton = document.querySelector(".fa-video");
+const videoContainer = document.querySelector(".video-container");
+
+videoDemoButton.addEventListener("click", () => {
+  if(videoContainer.classList.contains("video-container-expanded")) {
+    videoContainer.classList.remove("video-container-expanded");
+    videoContainer.classList.add("video-container-shrink");
+  }
+  else {
+    videoContainer.classList.remove("video-container-shrink");
+    videoContainer.classList.add("video-container-expanded");
+
+  }
+})
+
+const nameField = document.querySelectorAll(".fields")[0];
 const email = document.querySelectorAll(".fields")[1];
 const subject = document.querySelectorAll(".fields")[2];
-const fields = [name, email, subject];
+const fields = [nameField, email, subject];
 let showButton = null;
 
-// triggers animation for the button
+// triggers animation for the form submit button
 
 for(let i=0; 3 > i; i++){
-  document.querySelectorAll(".fields")[i].addEventListener("keydown", function(e) {
+  document.querySelectorAll(".fields")[i].addEventListener("keydown", function() {
     setTimeout(function() {
-      if(name.value.length > 0 && email.value.length > 0 && subject.value.length > 0) {
+      if(nameField.value.length > 0 && email.value.length > 0 && subject.value.length > 0) {
         document.querySelector("button").style.animation = "expand 1s";
         document.querySelector("button").style.height = "100%";
         document.querySelector("button").style.borderWidth = "1px";
@@ -61,7 +83,7 @@ for(let i=0; 3 > i; i++){
         document.querySelector(".button-cover").style.height = "0%";
         showButton = false;
       }
-      else if((name.value.length <= 0 || email.value.length <= 0 || subject.value.length <= 0) && showButton == false) {
+      else if((nameField.value.length <= 0 || email.value.length <= 0 || subject.value.length <= 0) && showButton == false) {
         document.querySelector("button").style.animation = "shrink 1s";
         document.querySelector("button").style.height = "0%";
         document.querySelector(".button-cover").style.animation = "expand 1s";

@@ -181,9 +181,9 @@ main {
                 font-weight: 300;
             }
 
-            span {
+            .email {
                 font-size: 1.5vw;
-                color: $tertiary;
+                color: $tertiary !important;
             }
 
             a, a:hover, a:visited {
@@ -237,25 +237,74 @@ main {
         place-items: center;
         padding-bottom: 0px;
 
-        div {
-            img {
-                width: 90vw;
-                max-width: 500px;
-                background-color: $tertiary;
-            }
-    
-            img:hover {
-                animation: colourChange 0.3s;
-                background-color: $secondary;
-            }
-        }
+        // widths of each container - multiplied by num of child elements
+        $front-end: calc(9.372vw * 8 + 2px); 
+        $back-end: calc(9.372vw * 5 + 2px); 
+        $miscellaneous: calc(9.372vw * 4 + 2px); 
 
-        @keyframes colourChange {
-            from {
-                background-color: $tertiary;
+        .skills-container {
+            margin: auto;
+            width: $front-end; // match the widest skill set
+
+            .skills-row {
+                max-width: 9.372vw;
+                margin-bottom: 30px;
+                display: flex;
+                position: relative;
+                overflow: hidden;
+    
+                p {
+                    width: 7.068vw;
+                    min-width: 7.068vw;
+                    padding: 1.041vw;
+                    border: solid 2px $secondary;
+                    border-left: 0px;
+                    display: inline-block;
+                    font-size: 0.833vw;
+                    
+                    &:first-of-type {
+                        border-left: solid 2px $secondary;
+                        font-family: 'Lato', sans-serif;
+                        font-weight: 800;
+                    }
+                }
             }
-            to {
-                background-color: $secondary;
+
+            .miscellaneous {
+                margin-bottom: 70px;
+            }
+
+            .expand-front-end {
+                animation: expand-front-end 1.5s;
+                width:  $front-end;
+                max-width: 100vw;
+            }
+
+            .expand-back-end {
+                animation: expand-back-end 1.5s;
+                width: $back-end;
+                max-width: 100vw;
+            }
+
+            .expand-miscellaneous {
+                animation: expand-miscellaneous 1.5s;
+                width: $miscellaneous;
+                max-width: 100vw;
+            }
+
+            @keyframes expand-front-end {
+                from {width: 8.554vw}
+                to {width: $front-end}
+            }
+
+            @keyframes expand-back-end {
+                from {width: 8.554vw}
+                to {width: $back-end}
+            }
+
+            @keyframes expand-miscellaneous {
+                from {width: 8.554vw}
+                to { width: $miscellaneous}
             }
         }
     }
@@ -392,12 +441,56 @@ main {
                                 color: $tertiary;
                             }
                         }
+
+                        .fa-video {
+                            color: $secondary;
+                            cursor: pointer;
+                        }
+
+                        .fa-video:hover {
+                            color: $tertiary;
+                        }
                     }
 
                     .skills-used {
                         text-align: center;
                         margin-top: 30px;
                         font-weight: 300;
+                    }
+                }
+
+                .video-container {
+                    width: 100%;
+                    display: grid;
+                    place-items: center;
+                    margin-top: 100px;
+                    overflow: hidden;
+                    height: 0px;
+
+                    video {
+                        max-width: 950px;
+                    }
+                }
+
+                @media (min-width: 1024px) {
+                    .video-container-expanded {
+                        animation: expand-video 0.5s;
+                        height: 534px;
+                    }
+    
+                    @keyframes expand-video {
+                        from {height: 0px}
+                        to {height: 534px}
+                    }
+    
+                    .video-container-shrink {
+                        animation: shrink-video 0.5s;
+                        height: 0px;
+                    }
+    
+                    @keyframes shrink-video {
+                        from {height: 534px}
+                        to {height: 0px}
                     }
                 }
             }

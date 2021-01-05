@@ -79,6 +79,30 @@ main {
                         margin-bottom: 50px;
                     }
                 }
+
+                .video-container {
+                    margin-top: 3.5vh;
+                }
+
+                .video-container-expanded {
+                    animation: expand-video 0.5s;
+                    height: 54vw;
+                }
+
+                @keyframes expand-video {
+                    from {height: 0px}
+                    to {height: 54vw}
+                }
+
+                .video-container-shrink {
+                    animation: shrink-video 0.5s;
+                    height: 0px;
+                }
+
+                @keyframes shrink-video {
+                    from {height: 54vw}
+                    to {height: 0px}
+                }
             }
         }
     }

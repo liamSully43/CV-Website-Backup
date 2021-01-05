@@ -179,9 +179,9 @@ main #about .about-info-container p {
   font-weight: 300;
 }
 
-main #about .about-info-container span {
+main #about .about-info-container .email {
   font-size: 1.5vw;
-  color: #00c5a0;
+  color: #00c5a0 !important;
 }
 
 main #about .about-info-container a, main #about .about-info-container a:hover, main #about .about-info-container a:visited {
@@ -244,33 +244,113 @@ main #skills {
   padding-bottom: 0px;
 }
 
-main #skills div img {
-  width: 90vw;
-  max-width: 500px;
-  background-color: #00c5a0;
+main #skills .skills-container {
+  margin: auto;
+  width: calc(9.372vw * 8 + 2px);
 }
 
-main #skills div img:hover {
-  -webkit-animation: colourChange 0.3s;
-          animation: colourChange 0.3s;
-  background-color: #fff;
+main #skills .skills-container .skills-row {
+  max-width: 9.372vw;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
-@-webkit-keyframes colourChange {
+main #skills .skills-container .skills-row p {
+  width: 7.068vw;
+  min-width: 7.068vw;
+  padding: 1.041vw;
+  border: solid 2px #fff;
+  border-left: 0px;
+  display: inline-block;
+  font-size: 0.833vw;
+}
+
+main #skills .skills-container .skills-row p:first-of-type {
+  border-left: solid 2px #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 800;
+}
+
+main #skills .skills-container .miscellaneous {
+  margin-bottom: 70px;
+}
+
+main #skills .skills-container .expand-front-end {
+  -webkit-animation: expand-front-end 1.5s;
+          animation: expand-front-end 1.5s;
+  width: calc(9.372vw * 8 + 2px);
+  max-width: 100vw;
+}
+
+main #skills .skills-container .expand-back-end {
+  -webkit-animation: expand-back-end 1.5s;
+          animation: expand-back-end 1.5s;
+  width: calc(9.372vw * 5 + 2px);
+  max-width: 100vw;
+}
+
+main #skills .skills-container .expand-miscellaneous {
+  -webkit-animation: expand-miscellaneous 1.5s;
+          animation: expand-miscellaneous 1.5s;
+  width: calc(9.372vw * 4 + 2px);
+  max-width: 100vw;
+}
+
+@-webkit-keyframes expand-front-end {
   from {
-    background-color: #00c5a0;
+    width: 8.554vw;
   }
   to {
-    background-color: #fff;
+    width: calc(9.372vw * 8 + 2px);
   }
 }
 
-@keyframes colourChange {
+@keyframes expand-front-end {
   from {
-    background-color: #00c5a0;
+    width: 8.554vw;
   }
   to {
-    background-color: #fff;
+    width: calc(9.372vw * 8 + 2px);
+  }
+}
+
+@-webkit-keyframes expand-back-end {
+  from {
+    width: 8.554vw;
+  }
+  to {
+    width: calc(9.372vw * 5 + 2px);
+  }
+}
+
+@keyframes expand-back-end {
+  from {
+    width: 8.554vw;
+  }
+  to {
+    width: calc(9.372vw * 5 + 2px);
+  }
+}
+
+@-webkit-keyframes expand-miscellaneous {
+  from {
+    width: 8.554vw;
+  }
+  to {
+    width: calc(9.372vw * 4 + 2px);
+  }
+}
+
+@keyframes expand-miscellaneous {
+  from {
+    width: 8.554vw;
+  }
+  to {
+    width: calc(9.372vw * 4 + 2px);
   }
 }
 
@@ -442,10 +522,78 @@ main #portfolio div #portfolio-container .portfolio-containers div .code-links:h
   color: #00c5a0;
 }
 
+main #portfolio div #portfolio-container .portfolio-containers div .fa-video {
+  color: #fff;
+  cursor: pointer;
+}
+
+main #portfolio div #portfolio-container .portfolio-containers div .fa-video:hover {
+  color: #00c5a0;
+}
+
 main #portfolio div #portfolio-container .portfolio-containers .skills-used {
   text-align: center;
   margin-top: 30px;
   font-weight: 300;
+}
+
+main #portfolio div #portfolio-container .video-container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-top: 100px;
+  overflow: hidden;
+  height: 0px;
+}
+
+main #portfolio div #portfolio-container .video-container video {
+  max-width: 950px;
+}
+
+@media (min-width: 1024px) {
+  main #portfolio div #portfolio-container .video-container-expanded {
+    -webkit-animation: expand-video 0.5s;
+            animation: expand-video 0.5s;
+    height: 534px;
+  }
+  @-webkit-keyframes expand-video {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 534px;
+    }
+  }
+  @keyframes expand-video {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 534px;
+    }
+  }
+  main #portfolio div #portfolio-container .video-container-shrink {
+    -webkit-animation: shrink-video 0.5s;
+            animation: shrink-video 0.5s;
+    height: 0px;
+  }
+  @-webkit-keyframes shrink-video {
+    from {
+      height: 534px;
+    }
+    to {
+      height: 0px;
+    }
+  }
+  @keyframes shrink-video {
+    from {
+      height: 534px;
+    }
+    to {
+      height: 0px;
+    }
+  }
 }
 
 main #contact {

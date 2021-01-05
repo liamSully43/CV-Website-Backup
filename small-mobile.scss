@@ -28,6 +28,30 @@
                     font-size: 5vw !important;
                 }
             }
+
+            .video-container {
+                margin-top: 30px;
+            }
+
+            .video-container-expanded {
+                animation: expand-video 0.5s;
+                height: 220px !important;
+            }
+
+            @keyframes expand-video {
+                from {height: 0px}
+                to {height: 220px}
+            }
+
+            .video-container-shrink {
+                animation: shrink-video 0.5s;
+                height: 0px;
+            }
+
+            @keyframes shrink-video {
+                from {height: 220px}
+                to {height: 0px}
+            }
         }
     }
 }

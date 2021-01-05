@@ -14,4 +14,56 @@
 #portfolio div #portfolio-container .portfolio-containers .skills-used {
   font-size: 5vw !important;
 }
+
+#portfolio div #portfolio-container .video-container {
+  margin-top: 30px;
+}
+
+#portfolio div #portfolio-container .video-container-expanded {
+  -webkit-animation: expand-video 0.5s;
+          animation: expand-video 0.5s;
+  height: 220px !important;
+}
+
+@-webkit-keyframes expand-video {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 220px;
+  }
+}
+
+@keyframes expand-video {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 220px;
+  }
+}
+
+#portfolio div #portfolio-container .video-container-shrink {
+  -webkit-animation: shrink-video 0.5s;
+          animation: shrink-video 0.5s;
+  height: 0px;
+}
+
+@-webkit-keyframes shrink-video {
+  from {
+    height: 220px;
+  }
+  to {
+    height: 0px;
+  }
+}
+
+@keyframes shrink-video {
+  from {
+    height: 220px;
+  }
+  to {
+    height: 0px;
+  }
+}
 /*# sourceMappingURL=small-mobile.css.map */
