@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="Front end web developer in the southwest area, available for freelance work" >
+    <meta name="Description" content="Full stack web developer in the Bristol area, available for work" >
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet" id="fonts" disabled> <!-- Google Fonts -->
     <script defer src="https://kit.fontawesome.com/70314bd783.js" crossorigin="anonymous"></script> <!-- Font Awesome -->
     <link href="./styles.css" rel="stylesheet" type="text/css" />
     <link href="./tablet.css" rel="stylesheet" type="text/css" media="(max-width: 1024px)" />
-    <link href="./mobile.css" rel="stylesheet" type="text/css" media="(max-width: 450px)" />
+    <link href="./mobile.css" rel="stylesheet" type="text/css" media="(max-width: 750px)" />
     <link href="./small-mobile.css" rel="stylesheet" type="text/css" media="(max-width: 400px)" />
     <link href="./Assets/icon.png" type="image/png" rel="shortcut icon" />
     <title>Liam Sullivan</title>
@@ -20,7 +20,7 @@
     <header>
         <div>
             <h1>Liam Sullivan</h1>
-            <h2>Front End Developer</h2>
+            <h2>Full Stack Developer</h2>
         </div>
     </header>
     <!-- Navigation -->
@@ -40,9 +40,9 @@
                 <div>
                     <h1 class="titles">ABOUT</h1>
                     <p>Hi, I'm Liam</p>
-                    <p>I'm a self taught front end developer that has skills in a variety of front end development technologies. If you have any job opportunities, feel free to get in touch. You can either use the contact field at the bottom of the page, or by emailing me at</p>
+                    <p>I'm a self taught full stack developer that has skills in a variety of web development technologies. If you have any job opportunities, feel free to get in touch. You can either use the contact field at the bottom of the page, or by emailing me at</p>
                     <br />
-                    <span>liamsullivan43@gmail.com</span>
+                    <a href="mailto:liamsullivan43@gmail.com" class="email">liamsullivan43@gmail.com</span>
                     <br />
                     <br />
                     <a href="https://github.com/liamSully43" target="_blank" rel="noreferrer" title="Click to visit my Github"><img src="./Assets/github.png" width="60" height="60" alt="Link to Github account" /></a>
@@ -54,8 +54,31 @@
         <!-- Skills Section -->
         <section id="skills">
             <h1 class="titles">SKILLS</h1>
-            <div> <!-- div required for animations - add floating animation to div & colour animation to img so that when the user hovers over the img the floating animation isn't reapplied -->
-                <img src="./Assets/skills.webp" height="auto" alt="HTML, CSS, SCSS, Bootstrap, JavaScript, jQuery, React, Angular, Node, Express, PHP, MongoDB, FileZilla, Git Version Control, Adobe XD" />
+            <div class="skills-container">
+                <!-- When updating the skill sets - update the width calculator vaiables in styles.scss in the #skills selector -->
+                <div class="skills-row front-end">
+                    <p>Front End</p>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>SCSS</p>
+                    <p>JavaScript</p>
+                    <p>jQuery</p>
+                    <p>React</p>
+                    <p>Angular</p>
+                </div>
+                <div class="skills-row back-end">
+                    <p>Back End</p>
+                    <p>Node.js</p>
+                    <p>Express.js</p>
+                    <p>PHP</p>
+                    <p>MongoDB</p>
+                </div>
+                <div class="skills-row miscellaneous">
+                    <p>Miscellaneous</p>
+                    <p>Adobe XD</p>
+                    <p>Git Version Control</p>
+                    <p>FileZilla</p>
+                </div>
             </div>
         </section>
         <div class="break"></div>
@@ -64,6 +87,25 @@
             <div>
                 <h1 class="titles">PORTFOLIO</h1>
                 <div id="portfolio-container">
+                    <section class="portfolio-containers">
+                        <!-- Blackpines -->
+                        <!-- Photo & Container of Project -->
+                        <a href="http://www.blackpines.co.uk/" target="_blank" rel="noreferrer" title="View the Blackpines project">
+                            <img src="./Assets/Blackpines.WebP" alt="Link to the Blackpines project" />
+                            <div class="cover">
+                                <p>Manage multiple Twitter accounts in one place at one time.</p>
+                            </div>
+                        </a>
+                        <br />
+                        <br />
+                        <!-- Text & Links Related to Project -->
+                        <div>
+                            <a href="http://www.blackpines.co.uk/" target="_blank" rel="noreferrer" title="View the Blackpines project" class="title-links">Blackpines</a>
+                            <a href="https://github.com/liamSully43/Blackpines" target="_blank" rel="noreferrer" title="View the code" class="code-links"><i class="fas fa-code"></i></a>
+                            <i class="fas fa-video" title="Video demo"></i>
+                        </div>
+                        <p class="skills-used">MongoDB, Express.js, Node.js & Angular</p>
+                    </section>
                     <section class="portfolio-containers">
                         <!-- Discover Drink -->
                         <!-- Photo & Container of Project -->
@@ -88,7 +130,7 @@
                         <a href="https://red-window.co.uk/" target="_blank" rel="noreferrer" title="View the Red Window project">
                             <img src="./Assets/Red Window.webp" alt="Link to the Red Window project" />
                             <div class="cover">
-                                <p>An image gallery that sources its images from unsplash.com</p>
+                                <p>An image gallery that sources its images from the Unsplash API</p>
                             </div>
                         </a>
                         <br />
@@ -98,25 +140,7 @@
                             <a href="https://red-window.co.uk/" target="_blank" rel="noreferrer" title="View the Red Window project" class="title-links">Red Window</a>
                             <a href="https://github.com/liamSully43/red-window" target="_blank" rel="noreferrer" title="View the code" class="code-links"><i class="fas fa-code"></i></a>
                         </div>
-                        <p class="skills-used">Angular JS & unsplash.com API</p>
-                    </section>
-                    <section class="portfolio-containers">
-                        <!-- Graphic Logo Creator -->
-                        <!-- Photo & Container of Project -->
-                        <a href="https://liam-sullivan.co.uk/logo-creator" target="_blank" rel="noreferrer" title="View the Graphic Logo Creator project">
-                            <img src="./Assets/Logo Creator.webp" alt="Link to the Graphic Logo Creator project" />
-                            <div class="cover">
-                                <p>Create your own graphic images, icons or logos with this Graphic Logo Creator</p>
-                            </div>
-                        </a>
-                        <br />
-                        <br />
-                        <!-- Text & Links Related to Project -->
-                        <div>
-                            <a href="https://liam-sullivan.co.uk/logo-creator" target="_blank" rel="noreferrer" title="View the Graphic Logo Creator project" class="title-links">Graphic Logo Creator</a>
-                            <a href="https://github.com/liamSully43/graphic-logo-creator" target="_blank" rel="noreferrer" title="View the code" class="code-links"><i class="fas fa-code"></i></a>
-                        </div>
-                        <p class="skills-used">HTML, CSS & JavaScript</p>
+                        <p class="skills-used">Angular & Unsplash API</p>
                     </section>
                     <section class="portfolio-containers">
                         <!-- Wheel of Fortune -->
@@ -136,6 +160,12 @@
                         </div>
                         <p class="skills-used">React.js</p>
                     </section>
+                    <div class="video-container">
+                        <video width="95%" height="auto" controls>
+                            <source src="./Assets/Blackpines Demo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
             </div>
         </section>

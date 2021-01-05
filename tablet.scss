@@ -84,6 +84,26 @@ main {
                         font-size: 1.5vw;
                     }
                 }
+
+                .video-container-expanded {
+                    animation: expand-video 0.5s;
+                    height: 54vw;
+                }
+
+                @keyframes expand-video {
+                    from {height: 0px}
+                    to {height: 54vw}
+                }
+
+                .video-container-shrink {
+                    animation: shrink-video 0.5s;
+                    height: 0px;
+                }
+
+                @keyframes shrink-video {
+                    from {height: 54vw}
+                    to {height: 0px}
+                }
             }
         }
     }
