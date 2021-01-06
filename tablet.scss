@@ -1,3 +1,5 @@
+@import './styles.scss';
+
 $heading-font-size-small: 4vw;
 $text-font-size-small: 2vw;
 
@@ -55,6 +57,84 @@ main {
             border-bottom-width: 30vw;
             border-left-width: 10vw;
             border-right-width: 10vw;
+        }
+    }
+
+    #skills {
+        // height of each container - multiplied by num of child elements
+        $front-end: calc(63px * 8); 
+        $back-end: calc(63px * 5); 
+        $miscellaneous: calc(63px * 4); 
+
+        .skills-container {
+            width: 90vw;
+            max-width: 800px;
+            height: auto;
+            display: flex;
+
+            .skills-row {
+                flex: 0 1 calc(100% / 3);
+                max-width: calc(100% / 3);
+                max-height: 63px;
+                display: block;
+                margin-left: 30px;
+
+                p {
+                    width: calc(100% - 44px);
+                    min-width: 10px;
+                    padding: 20px;
+                    font-size: 16px;
+                    border: solid 2px $secondary;
+                    border-top: 0px;
+                    display: block !important;
+    
+                    &:first-of-type {
+                        border-top: solid 2px $secondary;
+                    }
+                }
+            }
+
+            .front-end {
+                margin-left: 0px !important;
+            }
+
+            .miscellaneous {
+                margin-bottom: 30px;
+            }
+
+            .expand-front-end {
+                animation: expand-front-end 1.5s;
+                height: $front-end;
+                max-height: $front-end;
+                margin-bottom: 30px;
+            }
+
+            .expand-back-end {
+                animation: expand-back-end 1.5s;
+                height: $back-end;
+                max-height: $back-end;
+            }
+
+            .expand-miscellaneous {
+                animation: expand-miscellaneous 1.5s;
+                height: $miscellaneous;
+                max-height: $miscellaneous;
+            }
+
+            @keyframes expand-front-end {
+                from {height: 8.554vw}
+                to {height: $front-end}
+            }
+
+            @keyframes expand-back-end {
+                from {height: 8.554vw}
+                to {height: $back-end}
+            }
+
+            @keyframes expand-miscellaneous {
+                from {height: 8.554vw}
+                to {height: $miscellaneous}
+            }
         }
     }
 

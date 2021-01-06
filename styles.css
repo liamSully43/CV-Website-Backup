@@ -185,7 +185,6 @@ main #about .about-info-container .email {
 }
 
 main #about .about-info-container a, main #about .about-info-container a:hover, main #about .about-info-container a:visited {
-  color: none;
   text-decoration: none;
 }
 
@@ -250,7 +249,7 @@ main #skills .skills-container {
 }
 
 main #skills .skills-container .skills-row {
-  max-width: 9.372vw;
+  max-width: calc(7.068vw + 1.041vw + 1.041vw + 4px);
   margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;

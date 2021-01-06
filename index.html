@@ -55,7 +55,7 @@
         <section id="skills">
             <h1 class="titles">SKILLS</h1>
             <div class="skills-container">
-                <!-- When updating the skill sets - update the width calculator vaiables in styles.scss in the #skills selector -->
+                <!-- When updating the skill sets - update the width calculator vaiables in styles.scss, tablet.scss & mobile.scss in the #skills selector -->
                 <div class="skills-row front-end">
                     <p>Front End</p>
                     <p>HTML</p>

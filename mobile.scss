@@ -45,6 +45,60 @@ main {
         }
     }
 
+    #skills {// height of each container - multiplied by num of child elements
+        $front-end: calc(8.5vw * 8 + 0.29vw); 
+        $back-end: calc(8.5vw * 5 + 0.29vw); 
+        $miscellaneous: calc(8.5vw * 4 + 0.29vw);
+
+        .skills-container {
+            .skills-row {
+                margin-left: 4vw;
+                max-height: 8.5vw;
+    
+                p {
+                    width: calc(100% - 5.98vw);
+                    font-size: 2.134vw;
+                    padding: 2.7vw;
+                    border-width: 0.29vw !important;
+                }
+            }
+
+            .expand-front-end {
+                animation: expand-front-end 1.5s;
+                height: $front-end;
+                max-height: $front-end;
+                margin-bottom: 30px;
+            }
+
+            .expand-back-end {
+                animation: expand-back-end 1.5s;
+                height: $back-end;
+                max-height: $back-end;
+            }
+
+            .expand-miscellaneous {
+                animation: expand-miscellaneous 1.5s;
+                height: $miscellaneous;
+                max-height: $miscellaneous;
+            }
+
+            @keyframes expand-front-end {
+                from {height: 8.554vw}
+                to {height: $front-end}
+            }
+
+            @keyframes expand-back-end {
+                from {height: 8.554vw}
+                to {height: $back-end}
+            }
+
+            @keyframes expand-miscellaneous {
+                from {height: 8.554vw}
+                to {height: $miscellaneous}
+            }
+        }
+    }
+
     #portfolio {
         padding-bottom: 0px;
         

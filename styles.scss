@@ -187,7 +187,6 @@ main {
             }
 
             a, a:hover, a:visited {
-                color: none;
                 text-decoration: none;
 
                 img {
@@ -247,7 +246,7 @@ main {
             width: $front-end; // match the widest skill set
 
             .skills-row {
-                max-width: 9.372vw;
+                max-width: calc(7.068vw + 1.041vw + 1.041vw + 4px); // width + padding left + padding right + border width
                 margin-bottom: 30px;
                 display: flex;
                 position: relative;
@@ -276,7 +275,7 @@ main {
 
             .expand-front-end {
                 animation: expand-front-end 1.5s;
-                width:  $front-end;
+                width: $front-end;
                 max-width: 100vw;
             }
 

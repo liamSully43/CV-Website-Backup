@@ -31,6 +31,94 @@ main #about .triangle {
   border-right-width: 10vw;
 }
 
+main #skills .skills-container .skills-row {
+  margin-left: 4vw;
+  max-height: 8.5vw;
+}
+
+main #skills .skills-container .skills-row p {
+  width: calc(100% - 5.98vw);
+  font-size: 2.134vw;
+  padding: 2.7vw;
+  border-width: 0.29vw !important;
+}
+
+main #skills .skills-container .expand-front-end {
+  -webkit-animation: expand-front-end 1.5s;
+          animation: expand-front-end 1.5s;
+  height: calc(8.5vw * 8 + 0.29vw);
+  max-height: calc(8.5vw * 8 + 0.29vw);
+  margin-bottom: 30px;
+}
+
+main #skills .skills-container .expand-back-end {
+  -webkit-animation: expand-back-end 1.5s;
+          animation: expand-back-end 1.5s;
+  height: calc(8.5vw * 5 + 0.29vw);
+  max-height: calc(8.5vw * 5 + 0.29vw);
+}
+
+main #skills .skills-container .expand-miscellaneous {
+  -webkit-animation: expand-miscellaneous 1.5s;
+          animation: expand-miscellaneous 1.5s;
+  height: calc(8.5vw * 4 + 0.29vw);
+  max-height: calc(8.5vw * 4 + 0.29vw);
+}
+
+@-webkit-keyframes expand-front-end {
+  from {
+    height: 8.554vw;
+  }
+  to {
+    height: calc(8.5vw * 8 + 0.29vw);
+  }
+}
+
+@keyframes expand-front-end {
+  from {
+    height: 8.554vw;
+  }
+  to {
+    height: calc(8.5vw * 8 + 0.29vw);
+  }
+}
+
+@-webkit-keyframes expand-back-end {
+  from {
+    height: 8.554vw;
+  }
+  to {
+    height: calc(8.5vw * 5 + 0.29vw);
+  }
+}
+
+@keyframes expand-back-end {
+  from {
+    height: 8.554vw;
+  }
+  to {
+    height: calc(8.5vw * 5 + 0.29vw);
+  }
+}
+
+@-webkit-keyframes expand-miscellaneous {
+  from {
+    height: 8.554vw;
+  }
+  to {
+    height: calc(8.5vw * 4 + 0.29vw);
+  }
+}
+
+@keyframes expand-miscellaneous {
+  from {
+    height: 8.554vw;
+  }
+  to {
+    height: calc(8.5vw * 4 + 0.29vw);
+  }
+}
+
 main #portfolio {
   padding-bottom: 0px;
 }
