@@ -1,3 +1,7 @@
+.skills-row {
+  margin-left: 3.71vw !important;
+}
+
 #portfolio div #portfolio-container .portfolio-containers {
   -ms-flex-preferred-size: calc(100% - 30px) !important;
       flex-basis: calc(100% - 30px) !important;
