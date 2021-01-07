@@ -32,11 +32,11 @@ $tertiary: #00c5a0;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #aaa;
+    background: $tertiary;
 }
 
 ::-webkit-scrollbar-thumb:hover { 
-    background: $tertiary;
+    background: #00a788;
 }
 
 html {
@@ -607,7 +607,7 @@ main {
         }
 
         .message {
-            font-size: $text-font-size;
+            font-size: 16px; //$text-font-size;
             font-weight: 300;
         }
     }

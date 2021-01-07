@@ -10,7 +10,6 @@ let sections = [
 const about = document.querySelector("#about");
 const skills = document.querySelector("#skills");
 const portfolio = document.querySelector("#portfolio");
-const contact = document.querySelector("#contact");
 
 // cross browser support
 const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
@@ -36,12 +35,6 @@ window.addEventListener("scroll", function() {
 
   if(portfolio.getBoundingClientRect().top < height) {
     Array.prototype.forEach.call(portfolio.children, ele => {
-      ele.classList.add("slide-up");
-    })
-  }
-
-  if(contact.getBoundingClientRect().top < height) {
-    Array.prototype.forEach.call(contact.children, ele => {
       ele.classList.add("slide-up");
     })
   }
@@ -111,7 +104,23 @@ document.querySelector("form").addEventListener("submit", function(e) {
   }
 })
 
-// Checks if the subject field has at least 10 charcters
+// Checks if the form fields have enough charcters justify submiting the form
+
+nameField.addEventListener("keydown", function() {
+  if(nameField.value.length >= 1) {
+    setTimeout(function() {
+      nameField.style.borderColor = "#fff";
+    }, 1);
+  }
+});
+
+email.addEventListener("keydown", function() {
+  if(email.value.length >= 1) {
+    setTimeout(function() {
+      email.style.borderColor = "#fff";
+    }, 1);
+  }
+});
 
 subject.addEventListener("keydown", function() {
   if(subject.value.length >= 10) {

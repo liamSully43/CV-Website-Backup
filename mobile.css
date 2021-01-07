@@ -11,7 +11,7 @@ nav ul li {
   font-size: 3vw;
 }
 
-main #about .about-info-container p {
+main #about .about-info-container p, main #about .about-info-container .email {
   font-size: 3vw;
 }
 

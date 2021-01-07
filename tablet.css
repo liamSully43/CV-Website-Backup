@@ -17,11 +17,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #aaa;
+  background: #00c5a0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00c5a0;
+  background: #00a788;
 }
 
 html {
@@ -713,7 +713,7 @@ main #contact form .button-container:hover .text {
 }
 
 main #contact .message {
-  font-size: 1vw;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -761,7 +761,7 @@ nav ul li {
   font-size: 2vw;
 }
 
-main #about .about-info-container p {
+main #about .about-info-container p, main #about .about-info-container .email {
   font-size: 2vw;
 }
 
